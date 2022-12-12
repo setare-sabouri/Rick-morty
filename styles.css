@@ -1,9 +1,32 @@
-*{
+@font-face {
+    font-family: rickmorty;
+    src: url("get_schwifty.ttf");
+}
+
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-body{
-    background-color: burlywood;
+.header-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #2e8934;
 }
+.header-container h1 {
+    font-family: rickmorty;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    font-size: 3rem;
+    color: #15acc9;
+    text-align: center;
+    width: 100%;
+    text-shadow: 0 0 3px #000000, 0 0 11px #fff500;
+}
+
+.main-content {}
