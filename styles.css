@@ -35,12 +35,7 @@ body {
     bottom: 0;
     position: absolute;
 }
-/* .desc-side-left {
-    width: 50%;
-    background-image: url('Rick-And-Morty-PNG-Transparent-Image.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-} */
+
 pre,
 button {
     position: absolute;
@@ -66,4 +61,10 @@ button {
     width: 25%;
     color: #FFF500;
 
+}
+
+@media screen and(min-width: 650px) {
+    .content-image {
+        width: 50%;
+    }
 }
