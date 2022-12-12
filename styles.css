@@ -8,25 +8,62 @@
     padding: 0;
     margin: 0;
 }
-
-.header-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+body {
     background: #2e8934;
 }
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
 .header-container h1 {
     font-family: rickmorty;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-weight: 400;
     font-size: 3rem;
     color: #15acc9;
     text-align: center;
-    width: 100%;
     text-shadow: 0 0 3px #000000, 0 0 11px #fff500;
 }
+.main-content {
+    display: flex;
+    height: 100%;
+}
+.content-image {
+    width: 80%;
+    bottom: 0;
+    position: absolute;
+}
+/* .desc-side-left {
+    width: 50%;
+    background-image: url('Rick-And-Morty-PNG-Transparent-Image.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
+pre,
+button {
+    position: absolute;
+    font-family: 'Gaegu';
+    align-items: center;
+}
+.home-quistion {
+    top: 25%;
+    right: 1%;
+    color: #15ACC9;
+    font-size: 4rem;
+    font-weight: 400;
+    text-shadow: 0 3px 3px #000000;
+}
+.play-btn {
+    top: 70%;
+    right: 20%;
+    padding: 0.8rem;
+    border-radius: 3rem;
+    background-color: #15ACC9;
+    border-style: none;
+    font-size: 2rem;
+    width: 25%;
+    color: #FFF500;
 
-.main-content {}
+}
