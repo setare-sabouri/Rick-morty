@@ -1,8 +1,13 @@
 export function validate(e,character) {
-    if (e.target.innerHTML===character.results[2].status) {
-      console.log("equal");
+    console.log("actually is "+character.status);
+    if (e.target.value===character.status) {
+      console.log("correct answer");
+    }
+    else if (e.target.value!==character.status) {
+        console.log("wront answer");
     }
     else{
-      console.log("dead");
+        console.log("unknown");
     }
+
   }
