@@ -21,7 +21,7 @@ body {
     border-radius: 50%;
 }
 .card-name {
-    font-size: 1rem;
+    font-size: 2rem;
     color: #FFF500;
 
 }
@@ -36,4 +36,9 @@ body {
     border-style: none;
     font-size: 2rem;
     width: 50%;
+}
+.result {
+    font-size: 2.5rem;
+    color: rgb(8, 119, 8);
+    padding: 0 2rem;
 }

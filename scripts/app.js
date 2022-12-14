@@ -1,15 +1,15 @@
 import { fetchData } from "./api.js";
 import { validate } from "./validations.js";
 let selected;
-
+export let score=0;
 const initialize=()=>{
   fetchData();
   setTimeout(() => {
     let characters = JSON.parse(localStorage.getItem("character"));
     renderCharacter(characters);
-  }, 500);
+  }, 1000);
 }
-
+initialize();
 const shuffle=(characters)=>{
   let resultsLen=characters.results.length;
   let randomIndex = Math.floor(Math.random() * resultsLen);
@@ -29,9 +29,10 @@ const deadBtn = document.querySelector(".dead-btn");
 aliveBtn.addEventListener("click",function() {
 	 validate(event,selected);
 });
+
 deadBtn.addEventListener("click", function (){
-	validate(event,selected);
+  validate(event,selected);
+  setTimeout(() => {
+    initialize();
+  }, 2000);
 });
-
-
-initialize();
