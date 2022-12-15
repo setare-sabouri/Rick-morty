@@ -1,7 +1,7 @@
 import { fetchData } from "./api.js";
 import { validate } from "./validations.js";
 let selected;
-export let score=0;
+let score=0;
 const initialize=()=>{
   fetchData();
   setTimeout(() => {
@@ -18,21 +18,35 @@ const shuffle=(characters)=>{
 const renderCharacter=(characters)=> {
   const cardimgEl = document.querySelector(".card-img");
   const cardnameEl = document.querySelector(".card-name");
-   selected=shuffle(characters);
+  selected=shuffle(characters);
   cardimgEl.src = selected.image;
   cardnameEl.innerHTML = selected.name;
 }
 
+let scoreEl=document.querySelector(".score");
+const updateScore=()=> {
+  score++;
+  console.log(score);
+  scoreEl.innerHTML=`Correct : ${score}`;
+}
 
 const aliveBtn = document.querySelector(".alive-btn");
 const deadBtn = document.querySelector(".dead-btn");
 aliveBtn.addEventListener("click",function() {
-	 validate(event,selected);
+  if (validate(event,selected)) {
+    updateScore();
+  }
+   setTimeout(() => {
+    initialize();
+  }, 2000);
 });
 
-deadBtn.addEventListener("click", function (){
-  validate(event,selected);
+deadBtn.addEventListener("click",function () {
+  if(validate(event,selected)) {
+	updateScore();
+}
   setTimeout(() => {
     initialize();
   }, 2000);
 });
+
