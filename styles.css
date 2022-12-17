@@ -8,9 +8,11 @@
     padding: 0;
     margin: 0;
 }
+
 body {
     background: #2e8934;
 }
+
 .page-wrapper {
     display: flex;
     flex-direction: column;
@@ -26,10 +28,12 @@ body {
     text-align: center;
     text-shadow: 0 0 3px #000000, 0 0 11px #fff500;
 }
+
 .main-content {
     display: flex;
     height: 100%;
 }
+
 .content-image {
     width: 80%;
     bottom: 0;
@@ -39,32 +43,53 @@ body {
 pre,
 button {
     position: absolute;
-    font-family: 'Gaegu';
+    font-family: "Gaegu";
     align-items: center;
 }
+
 .home-quistion {
     top: 20%;
     right: 1%;
-    color: #15ACC9;
+    color: #15acc9;
     font-size: 4rem;
     font-weight: 400;
     text-shadow: 0 3px 3px #000000;
 }
+
 .play-btn {
     top: 70%;
     right: 20%;
     padding: 0.8rem;
     border-radius: 3rem;
-    background-color: #15ACC9;
+    background-color: #15acc9;
     border-style: none;
     font-size: 2rem;
     width: 25%;
-    color: #FFF500;
-
+    color: #fff500;
 }
 
-@media screen and(min-width: 650px) {
+@media screen and (min-width: 500px) and (max-width: 1000px) {
     .content-image {
         width: 50%;
     }
+
+    .home-quistion {
+        right: 20%;
+
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .content-image {
+        width: 30%;
+    }
+
+    .home-quistion {
+        right: 20%;
+    }
+
+    .play-btn {
+        width: 15%;
+    }
+
 }
